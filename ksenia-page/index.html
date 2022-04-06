@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Ksenia Page</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">Actress</a>
+            <a href="#">Choreographer</a>
+            <a href="#">Dancer</a>
+            <a href="#">Model</a>
+        </div>
+
+        <div id="main">
+            <div class="header">
+                <div class="logo">Ksenia Druzhinina</div>
+                <div class="menu">
+                    <li>Actress</li>
+                    <li>Choreographer</li>
+                    <li>Dancer</li>
+                    <li>Model</li>
+                    <li>Social</li>
+                </div>
+                <div class="menu-button">
+                    <img onclick="openNav()" src="./images/menu-icon.png"/>
+                </div>
+            </div>
+            <div class="local-header">
+                <h1 class="local-title">DANCE</h1>
+            </div>
+            <div class="reel">
+                <iframe width="356" height="200" src="https://www.youtube.com/embed/9ooQ_EcV6_A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="main-content">
+                <div class="highlights">
+                    <h3>Highlights</h3>
+                    <ul>
+                        <li>Aljihsssdlqhieiblbeleibleib ielbciogii elh ciehcoigegio ih iehc iegcgc ice cioegcoeg</li>
+                        <li>Aljihsssdlqhieiblbeleibleib ielbciogii elh ciehcoigegio ih iehc iegcgc ice cioegcoeg</li>
+                        <li>Aljihsssdlqhieiblbeleibleib ielbciogii elh ciehcoigegio ih iehc iegcgc ice cioegcoeg</li>
+                        <li>Aljihsssdlqhieiblbeleibleib ielbciogii elh ciehcoigegio ih iehc iegcgc ice cioegcoeg</li>
+                        <li>Aljihsssdlqhieiblbeleibleib ielbciogii elh ciehcoigegio ih iehc iegcgc ice cioegcoeg</li>
+                    </ul>
+                </div>
+                <div class="experience">
+                    <h3>Experience</h3>
+                    <p>"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio."</p>
+                </div>
+                <div class="img-gallery">
+                    <h2>Image Gallery</h2>
+                    <div class="gallery-imgs">
+                        <div class="gallery-imgs-col-1">
+                            <img loading="lazy" class="gallery-img" src="./images/01.jpg" alt="">
+                            <img loading="lazy" class="gallery-img" src="./images/04.jpg" alt="">
+                            <img loading="lazy" class="gallery-img" src="./images/02.jpeg" alt="">
+                        </div>
+                        <div class="gallery-imgs-col-2">
+                            <img loading="lazy" class="gallery-img" src="./images/05.jpg" alt="">
+                            <img loading="lazy" class="gallery-img" src="./images/03.jpg" alt="">
+                            <img loading="lazy" class="gallery-img" src="./images/06.jpg" alt="">
+                            <img loading="lazy" class="gallery-img" src="./images/07.jpeg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="vid-gallery">
+                    <h2>Video Gallery</h2>
+                    <div class="gallery-nav">
+                        <img class="desktop-arrow left-arrow arrow" src="./images/left-arrow.png" alt="">
+                        <iframe class="current-video" width="355" height="200" src="https://www.youtube.com/embed/zTncAopESjs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <img class="desktop-arrow right-arrow arrow" src="./images/right-arrow.png" alt="">
+                        <div class="nav-arrows">
+                            <img class="mobile-arrow left-arrow arrow" src="./images/left-arrow.png" alt="">
+                            <img class="mobile-arrow right-arrow arrow" src="./images/right-arrow.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                © Ksenia Druzhinina 2022
+            </div>
+        </div>
+
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+
+            const currentVideo = document.querySelector('.current-video');
+
+            const rightArrow = document.querySelector('.right-arrow');
+            rightArrow.addEventListener('click', () => {
+                if (videos.indexOf(currentVideo.src) == videos.length - 1) {
+                    currentVideo.src = videos[0];
+                } else {
+                    currentVideo.src = videos[videos.indexOf(currentVideo.src) + 1];
+                }
+            });
+
+            const leftArrow = document.querySelector('.left-arrow');
+            leftArrow.addEventListener('click', () => {
+                if (videos.indexOf(currentVideo.src) == 0) {
+                    currentVideo.src = videos[videos.length - 1];
+                } else {
+                    currentVideo.src = videos[videos.indexOf(currentVideo.src) - 1];
+                }
+            })
+
+            const videos = [
+                'https://www.youtube.com/embed/zTncAopESjs',
+                'https://www.youtube.com/embed/FqXi2SRSG4o',
+                'https://www.youtube.com/embed/hu6i5aKdKfs',
+                'https://www.youtube.com/embed/Po_sLxV61bE'
+            ]
+
+            function showGalleryImg() {
+
+            }
+        </script>        
+    </body>
+</html>
